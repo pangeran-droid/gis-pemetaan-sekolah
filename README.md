@@ -1,5 +1,14 @@
 # 🗺️ Web GIS Sekolah - CodeIgniter 4
 
+<p>
+  <img src="https://img.shields.io/badge/CodeIgniter-4-EF4223?logo=codeigniter&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/Leaflet.js-Map-199900?logo=leaflet&logoColor=white" />
+  <img src="https://img.shields.io/badge/AdminLTE-3-blue" />
+  <img src="https://img.shields.io/github/contributors/pangeran-droid/WebGIS-Sekolah-CI4" />
+  <img src="https://img.shields.io/github/license/pangeran-droid/WebGIS-Sekolah-CI4" />
+</p>
+
 Proyek ini merupakan aplikasi Web GIS (Geographic Information System) untuk pendataan dan pemetaan lokasi sekolah, dibangun menggunakan framework **CodeIgniter 4** serta tampilan berbasis **AdminLTE**.
 
 ## ✨ Fitur Utama
@@ -91,4 +100,3 @@ Gunakan kredensial berikut untuk masuk sebagai admin:
 
 Proyek ini dibuat untuk keperluan pembelajaran dan tugas kuliah. Bebas dimodifikasi sesuai kebutuhan.
 
----
