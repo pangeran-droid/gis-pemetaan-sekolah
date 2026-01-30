@@ -1,6 +1,6 @@
 # 🗺️ Web GIS Sekolah - CodeIgniter 4
 
-Proyek ini merupakan aplikasi Web GIS (Geographic Information System) sederhana untuk pendataan dan pemetaan lokasi sekolah, dibangun menggunakan framework **CodeIgniter 4** serta tampilan berbasis **AdminLTE**.
+Proyek ini merupakan aplikasi Web GIS (Geographic Information System) untuk pendataan dan pemetaan lokasi sekolah, dibangun menggunakan framework **CodeIgniter 4** serta tampilan berbasis **AdminLTE**.
 
 ## ✨ Fitur Utama
 
