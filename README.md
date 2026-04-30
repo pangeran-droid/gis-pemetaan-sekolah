@@ -96,6 +96,24 @@ Gunakan kredensial berikut untuk masuk sebagai admin:
 - Gunakan versi PHP minimal 7.4 atau lebih tinggi.
 - Jika menggunakan XAMPP/Laragon, tempatkan folder proyek di `htdocs` atau `www`.
 
+## 👁️ Pratinjau
+
+`home`
+
+<img src="public/preview/home.png">
+
+***
+
+`login`
+
+<img src="public/preview/login.png">
+
+***
+
+`dashboard`
+
+<img src="public/preview/dashboard.png">
+
 ## 📄 Lisensi
 
 Proyek ini dibuat untuk keperluan pembelajaran dan tugas kuliah. Bebas dimodifikasi sesuai kebutuhan.
