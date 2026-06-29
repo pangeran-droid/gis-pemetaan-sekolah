@@ -40,7 +40,8 @@
 
               <div class="form-group">
                 <label>Password</label>
-                <input name="password" value="<?= $user['password'] ?>" placeholder="Password" class="form-control">
+                <!-- <input name="password" value="<?= $user['password'] ?>" placeholder="Password" class="form-control"> -->
+                <input type="password" name="password" class="form-control" placeholder="Masukan password baru">
                 <p class="text-danger"><?= $validation->hasError('password') ? $validation->getError('password') : '' ?></p>
               </div>
 

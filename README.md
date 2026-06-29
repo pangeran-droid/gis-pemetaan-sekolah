@@ -1,6 +1,6 @@
-# 🗺️ Web GIS Sekolah - CodeIgniter 4
+# 🗺️ School Web GIS - CodeIgniter 4
 
-<p>
+<p align="left">
   <img src="https://img.shields.io/badge/CodeIgniter-4-EF4223?logo=codeigniter&logoColor=white" />
   <img src="https://img.shields.io/badge/PHP-7.4+-777BB4?logo=php&logoColor=white" />
   <img src="https://img.shields.io/badge/Leaflet.js-Map-199900?logo=leaflet&logoColor=white" />
@@ -9,112 +9,222 @@
   <img src="https://img.shields.io/github/license/pangeran-droid/WebGIS-Sekolah-CI4" />
 </p>
 
-Proyek ini merupakan aplikasi Web GIS (Geographic Information System) untuk pendataan dan pemetaan lokasi sekolah, dibangun menggunakan framework **CodeIgniter 4** serta tampilan berbasis **AdminLTE**.
+A **Web-based Geographic Information System (Web GIS)** for managing and visualizing school locations, built with **CodeIgniter 4**, **Leaflet.js**, and **AdminLTE 3**.
 
-## ✨ Fitur Utama
+This project allows administrators to manage school information and display school locations interactively on a digital map.
 
-- 🔐 Autentikasi Admin (Login & Logout)
-- 📍 Pemetaan lokasi sekolah menggunakan Leaflet.js
-- 🏫 Manajemen data sekolah (CRUD)
-- 📊 Dashboard admin responsif dan modern
-- 🧭 Penentuan koordinat lokasi secara interaktif di peta
-- 📁 Upload gambar/foto sekolah
+---
 
-## 🛠️ Teknologi yang Digunakan
+## ✨ Features
 
-- [CodeIgniter 4](https://codeigniter.com/)
-- [AdminLTE 3](https://adminlte.io/)
-- [Leaflet.js](https://leafletjs.com/)
-- MySQL/MariaDB
-- Bootstrap, jQuery, FontAwesome
+* 🔐 Admin Authentication (Login & Logout)
+* 📍 Interactive school location mapping using Leaflet.js
+* 🏫 School Management (Create, Read, Update, Delete)
+* 📊 Responsive and modern Admin Dashboard
+* 🧭 Interactive map for selecting school coordinates
+* 📁 School image upload support
+* 🌍 Regional-based school management
+* 📌 Detailed school information page
 
-## 📚 Referensi Pembelajaran
+---
 
-- [YouTube Playlist – Membangun Web GIS Sekolah Codeigniter 4 + Leaflet](https://youtube.com/playlist?list=PLYfaT5HP5yRrZa_MW_eQymabg4oKVq3D1&si=lx3skJM382Oww9II)
-> Referensi utama dari seri pembelajaran di YouTube. Terima kasih kepada kreator konten atas ilmunya.
+## 🛠️ Built With
 
-## 🚀 Cara Menjalankan Proyek
+* CodeIgniter 4
+* PHP 7.4+
+* MySQL / MariaDB
+* Leaflet.js
+* AdminLTE 3
+* Bootstrap
+* jQuery
+* Font Awesome
 
-1. **Clone repositori**
+---
 
-   ```bash
-   git clone https://github.com/pangeran-droid/WebGIS-Sekolah-CI4.git
-   cd WebGIS-Sekolah-CI4
-   ```
+## 📚 Learning Reference
 
-2. **Salin file `.env.example`**
+This project was developed by following and adapting concepts from the following tutorial series:
 
-   ```bash
-   cp .env.example .env
-   ```
+**YouTube Playlist**
 
-3. **Edit konfigurasi database di `.env`**
+> Building a School Web GIS using CodeIgniter 4 & Leaflet
 
-   ```
-   database.default.hostname = localhost
-   database.default.database = nama_database
-   database.default.username = root
-   database.default.password =
-   database.default.DBDriver = MySQLi
-   ```
+https://youtube.com/playlist?list=PLYfaT5HP5yRrZa_MW_eQymabg4oKVq3D1&si=lx3skJM382Oww9II
 
-4. **Jalankan server lokal**
+Special thanks to the original content creator for providing valuable educational resources.
 
-   ```bash
-   php spark serve
-   ```
+---
 
-5. **Akses di browser**
-   ```
-   http://localhost:8080
-   ```
+## 🚀 Installation
 
-## 🔑 Login Admin
+### 1. Clone the repository
 
-Gunakan kredensial berikut untuk masuk sebagai admin:
+```bash
+git clone https://github.com/pangeran-droid/WebGIS-Sekolah-CI4.git
+cd WebGIS-Sekolah-CI4
+```
 
-- **Email**: `admin@gmail.com`
-- **Password**: `admin123`
+### 2. Install dependencies
 
-## 🧭 Struktur Proyek (Ringkasan)
+```bash
+composer install
+```
+
+### 3. Copy the environment file
+
+```bash
+cp env .env
+```
+
+or manually rename
 
 ```
-/app
-  ├── Controllers
-  ├── Models
-  ├── Views
-  └── Config
-/public
-  └── AdminLTE/
-/writable
+env
+```
+
+to
+
+```
 .env
 ```
 
-## 📌 Catatan
+---
 
-- Pastikan ekstensi PHP seperti `intl`, `curl`, `mbstring`, dan `openssl` aktif.
-- Gunakan versi PHP minimal 7.4 atau lebih tinggi.
-- Jika menggunakan XAMPP/Laragon, tempatkan folder proyek di `htdocs` atau `www`.
+### 4. Configure your database
 
-## 👁️ Pratinjau
+Edit the `.env` file:
 
-`home`
+```ini
+database.default.hostname = localhost
+database.default.database = your_database_name
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+```
+
+---
+
+### 5. Import the database
+
+Import the provided SQL file into your MySQL/MariaDB database.
+
+---
+
+### 6. Start the development server
+
+```bash
+php spark serve
+```
+
+---
+
+### 7. Open your browser
+
+```
+http://localhost:8080
+```
+
+---
+
+## 🔑 Default Admin Account
+
+Use the following credentials to log in:
+
+| Email                                     | Password |
+| ----------------------------------------- | -------- |
+| [admin@gmail.com](mailto:admin@gmail.com) | admin123 |
+
+---
+
+## 📁 Project Structure
+
+```
+app/
+├── Config/
+├── Controllers/
+├── Models/
+└── Views/
+
+public/
+└── AdminLTE/
+
+writable/
+
+.env
+```
+
+---
+
+## 📌 Requirements
+
+* PHP 7.4 or higher
+* Composer
+* MySQL or MariaDB
+* Enable the following PHP extensions:
+
+```
+intl
+curl
+mbstring
+openssl
+mysqli
+```
+
+If you're using **Laragon** or **XAMPP**, place the project inside:
+
+```
+www/
+```
+
+or
+
+```
+htdocs/
+```
+
+---
+
+## 👀 Preview
+
+### 🏠 Home
 
 <img src="public/preview/home.png">
 
-***
+---
 
-`login`
+### 📝 Register
+
+<img src="public/preview/register.png">
+
+---
+
+### 🔐 Login
 
 <img src="public/preview/login.png">
 
-***
+---
 
-`dashboard`
+### 📊 Dashboard
 
 <img src="public/preview/dashboard.png">
 
-## 📄 Lisensi
+---
 
-Proyek ini dibuat untuk keperluan pembelajaran dan tugas kuliah. Bebas dimodifikasi sesuai kebutuhan.
+## 🤝 Contributing
 
+Contributions are welcome!
+
+If you'd like to improve this project, feel free to:
+
+* Fork this repository
+* Create a new branch
+* Commit your changes
+* Submit a Pull Request
+
+---
+
+## 📄 License
+
+This project is intended for educational purposes and academic learning.
+
+You are free to use, modify, and distribute it in accordance with the project's license.

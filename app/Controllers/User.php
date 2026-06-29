@@ -140,7 +140,11 @@ class User extends BaseController
                 'email' => $this->request->getPost('email'),
             ];
         } else {
-            if ($user['foto'] != '' && file_exists('foto/' . $user['foto'])) {
+            if (
+                $user['foto'] != '' &&
+                $user['foto'] != 'default.png' &&
+                file_exists('foto/' . $user['foto'])
+            ) {
                 unlink('foto/' . $user['foto']);
             }
 
@@ -172,8 +176,12 @@ class User extends BaseController
     public function Delete($id_user)
     {
         $user = $this->ModelUser->DetailData($id_user);
-        
-        if ($user['foto'] != '' && file_exists('foto/' . $user['foto'])) {
+
+        if (
+            $user['foto'] != '' &&
+            $user['foto'] != 'default.png' &&
+            file_exists('foto/' . $user['foto'])
+        ) {
             unlink('foto/' . $user['foto']);
         }
 

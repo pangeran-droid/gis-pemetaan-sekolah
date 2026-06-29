@@ -13,8 +13,8 @@
             <!-- /.card-header -->
           <div class="card-body">
             
-          <?php
-          //notif insert data
+            <?php
+              //notif insert data
               if (session()->getFlashdata('insert')){
                 echo '<div class="alert alert-success alert-dismissible">
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -40,7 +40,7 @@
                 echo session()->getFlashdata('delete');
                 echo '</h5></div>';
               }
-              ?>
+            ?>
           <table id="example2" class="table table-sm table-bordered table-striped">
             <thead>
               <tr class="text-center">
@@ -59,7 +59,7 @@
                 <td><?= $no++ ?></td>
                 <td><?= $value['nama_user'] ?></td>
                 <td class="text-center"><?= $value['email'] ?></td>
-                <td class="text-center"><?= $value['password'] ?></td>
+                <td class="text-center"><i class="fas fa-lock"></i> ********</td>
                 <td class="text-center"><img src="<?= base_url('foto/' . $value['foto']) ?>" width="100px" height="100px"></td>
                 <td class="text-center">
                   <a href="<?= base_url('User/Edit/' . $value['id_user']) ?>" class="btn btn-xs btn-warning btn-flat"><i class="fas fa-pencil-alt"></i></a>

@@ -13,4 +13,9 @@ class ModelAuth extends Model
         ->where('password', $password)
             ->get()->getRowArray();
     }
+
+    public function InsertUser($data)
+    {
+        return $this->db->table('tbl_user')->insert($data);
+    }
 }

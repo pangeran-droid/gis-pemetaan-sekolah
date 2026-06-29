@@ -14,6 +14,74 @@ class Auth extends BaseController
         $this->ModelAuth = new ModelAuth();
     }
 
+    public function Register()
+    {
+        $data = [ 
+            'judul' => 'Register',
+        ];
+        return view('v_register', $data);
+    }
+
+    public function SaveRegister()
+    {
+        if ($this->validate([
+            'nama_user' => [
+                'label' => 'Nama Lengkap', 
+                'rules' => 'required', 
+                'errors' => [
+                    'required' => '{field} Wajib Diisi !!'
+                ]
+            ],
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'required|valid_email|is_unique[tbl_user.email]',
+                'errors' => [
+                    'required' => '{field} Wajib Diisi !!',
+                    'valid_email' => 'Format {field} tidak valid',
+                    'is_unique' => '{field} sudah terdaftar'
+                ]
+            ],
+            'password' => [
+                'label' => 'Password',
+                'rules' => 'required|min_length[6]',
+                'errors' => [
+                    'required' => '{field} Wajib Diisi !!',
+                    'min_length' => '{field} minimal 6 karakter'
+                ]
+            ],
+            // 'foto' => [
+            //     'label' => 'Foto',
+            //     'rules' => 'max_size[foto,1024]|is_image[foto]',
+            //     'errors' => [
+            //         'max_size' => '{field} maksimal 1MB',
+            //         'is_image' => '{field} harus berupa gambar'
+            //     ]
+            // ]
+        ])) {
+            $fileFoto = $this->request->getFile('foto');
+
+            if ($fileFoto && $fileFoto->getError() == 0) {
+                $namaFoto = $fileFoto->getRandomName();
+                $fileFoto->move('foto', $namaFoto);
+            } else {
+                $namaFoto = 'default.png';
+            }
+
+            $this->ModelAuth->InsertUser([
+                'nama_user' => $this->request->getPost('nama_user'),
+                'email' => $this->request->getPost('email'),
+                'password' => sha1($this->request->getPost('password')),
+                'foto' => $namaFoto
+            ]);
+
+            session()->setFlashdata('pesan_sukses', 'Berhasil register, silahkan login!');
+            return redirect()->to('Auth/Login');
+        } else {
+            session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
+            return redirect()->to('Auth/Register')->withInput();
+        }
+    }
+
     public function Login()
     {
         $data = [

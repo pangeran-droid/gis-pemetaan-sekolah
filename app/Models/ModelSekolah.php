@@ -46,6 +46,40 @@ class ModelSekolah extends Model
         ->get()->getRowArray();
     }
 
+    // public function DetailData($id_sekolah)
+    // {
+    //     $sekolah = $this->db->table('tbl_sekolah')
+    //         ->join('tbl_jenjang', 'tbl_jenjang.id_jenjang = tbl_sekolah.id_jenjang', 'left')
+    //         ->where('tbl_sekolah.id_sekolah', $id_sekolah)
+    //         ->get()
+    //         ->getRowArray();
+
+    //     if (!$sekolah) return null;
+
+    //     $sekolah['nama_provinsi'] = $this->db->table('tbl_provinsi')
+    //         ->where('id_provinsi', (string)$sekolah['id_provinsi'])
+    //         ->get()->getRowArray()['nama_provinsi'] ?? '';
+
+    //     $sekolah['nama_kabupaten'] = $this->db->table('tbl_kabupaten')
+    //         ->where('id_kabupaten', (string)$sekolah['id_kabupaten'])
+    //         ->get()->getRowArray()['nama_kabupaten'] ?? '';
+
+    //     $sekolah['nama_kecamatan'] = $this->db->table('tbl_kecamatan')
+    //         ->where('id_kecamatan', (string)$sekolah['id_kecamatan'])
+    //         ->get()->getRowArray()['nama_kecamatan'] ?? '';
+
+    //     $wilayah = $this->db->table('tbl_wilayah')
+    //         ->where('id_wilayah', $sekolah['id_wilayah'])
+    //         ->get()
+    //         ->getRowArray();
+
+    //     $sekolah['nama_wilayah'] = $wilayah['nama_wilayah'] ?? '';
+    //     $sekolah['geojson']      = $wilayah['geojson'] ?? '';
+    //     $sekolah['warna']        = $wilayah['warna'] ?? '';
+
+    //     return $sekolah;
+    // }
+
     public function UpdateData($id_sekolah, $data)
     {
     $this->db->table('tbl_sekolah')
