@@ -186,27 +186,14 @@ htdocs/
 
 ## 👀 Preview
 
-### 🏠 Home
+| Home | Login |
+|---|---|
+| <img src="public/preview/home.png" width="400"> | <img src="public/preview/login.png" width="400"> |
 
-<img src="public/preview/home.png">
+| Register | Dashboard |
+|---|---|
+| <img src="public/preview/register.png" width="400"> | <img src="public/preview/dashboard.png" width="400"> |
 
----
-
-### 📝 Register
-
-<img src="public/preview/register.png">
-
----
-
-### 🔐 Login
-
-<img src="public/preview/login.png">
-
----
-
-### 📊 Dashboard
-
-<img src="public/preview/dashboard.png">
 
 ---
 
