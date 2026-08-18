@@ -1,4 +1,4 @@
-# 🗺️ School Web GIS - CodeIgniter 4
+# 🗺️ Sistem Informasi Geografis Sekolah - CodeIgniter 4
 
 <p align="left">
   <img src="https://img.shields.io/badge/CodeIgniter-4-EF4223?logo=codeigniter&logoColor=white" />
@@ -9,26 +9,26 @@
   <img src="https://img.shields.io/github/license/pangeran-droid/WebGIS-Sekolah-CI4" />
 </p>
 
-A **Web-based Geographic Information System (Web GIS)** for managing and visualizing school locations, built with **CodeIgniter 4**, **Leaflet.js**, and **AdminLTE 3**.
+Sistem Informasi Geografis berbasis web (**Web GIS**) untuk mengelola dan menampilkan lokasi sekolah secara interaktif. Proyek ini dibangun menggunakan **CodeIgniter 4**, **Leaflet.js**, dan **AdminLTE 3**.
 
-This project allows administrators to manage school information and display school locations interactively on a digital map.
-
----
-
-## ✨ Features
-
-* 🔐 Admin Authentication (Login & Logout)
-* 📍 Interactive school location mapping using Leaflet.js
-* 🏫 School Management (Create, Read, Update, Delete)
-* 📊 Responsive and modern Admin Dashboard
-* 🧭 Interactive map for selecting school coordinates
-* 📁 School image upload support
-* 🌍 Regional-based school management
-* 📌 Detailed school information page
+Aplikasi ini memungkinkan administrator untuk mengelola informasi sekolah serta menampilkan lokasi sekolah secara interaktif melalui peta digital.
 
 ---
 
-## 🛠️ Built With
+## ✨ Fitur
+
+* 🔐 Autentikasi Admin (Login & Register)
+* 📍 Pemetaan lokasi sekolah secara interaktif menggunakan Leaflet.js
+* 🏫 Manajemen data sekolah (Tambah, Lihat, Ubah, Hapus)
+* 📊 Dashboard Admin yang responsif dan modern
+* 🧭 Peta interaktif untuk menentukan koordinat sekolah
+* 📁 Dukungan unggah gambar sekolah
+* 🌍 Pengelolaan sekolah berdasarkan wilayah
+* 📌 Halaman detail informasi sekolah
+
+---
+
+## 🛠️ Teknologi yang Digunakan
 
 * CodeIgniter 4
 * PHP 7.4+
@@ -41,62 +41,62 @@ This project allows administrators to manage school information and display scho
 
 ---
 
-## 📚 Learning Reference
+## 📚 Referensi Pembelajaran
 
-This project was developed by following and adapting concepts from the following tutorial series:
+Proyek ini dikembangkan dengan mempelajari dan mengadaptasi konsep dari seri tutorial berikut:
 
-**YouTube Playlist**
+**Playlist YouTube**
 
 > Building a School Web GIS using CodeIgniter 4 & Leaflet
 
 https://youtube.com/playlist?list=PLYfaT5HP5yRrZa_MW_eQymabg4oKVq3D1&si=lx3skJM382Oww9II
 
-Special thanks to the original content creator for providing valuable educational resources.
+Terima kasih kepada pembuat konten asli yang telah menyediakan materi pembelajaran yang sangat membantu dalam pengembangan proyek ini.
 
 ---
 
-## 🚀 Installation
+## 🚀 Instalasi
 
-### 1. Clone the repository
+### 1. Clone repository
 
 ```bash
-git clone https://github.com/pangeran-droid/WebGIS-Sekolah-CI4.git
-cd WebGIS-Sekolah-CI4
+git clone https://github.com/pangeran-droid/gis-pemetaan-sekolah.git
+cd gis-pemetaan-sekolah
 ```
 
-### 2. Install dependencies
+### 2. Install dependency
 
 ```bash
 composer install
 ```
 
-### 3. Copy the environment file
+### 3. Salin file environment
 
 ```bash
 cp env .env
 ```
 
-or manually rename
+Atau ubah nama file:
 
-```
+```text
 env
 ```
 
-to
+menjadi:
 
-```
+```text
 .env
 ```
 
 ---
 
-### 4. Configure your database
+### 4. Konfigurasi database
 
-Edit the `.env` file:
+Buka file `.env`, kemudian sesuaikan konfigurasi database:
 
 ```ini
 database.default.hostname = localhost
-database.default.database = your_database_name
+database.default.database = nama_database_anda
 database.default.username = root
 database.default.password =
 database.default.DBDriver = MySQLi
@@ -104,13 +104,13 @@ database.default.DBDriver = MySQLi
 
 ---
 
-### 5. Import the database
+### 5. Import database
 
-Import the provided SQL file into your MySQL/MariaDB database.
+Import file SQL yang tersedia ke database **MySQL/MariaDB** yang telah dibuat sebelumnya.
 
 ---
 
-### 6. Start the development server
+### 6. Jalankan server development
 
 ```bash
 php spark serve
@@ -118,51 +118,38 @@ php spark serve
 
 ---
 
-### 7. Open your browser
+### 7. Buka aplikasi
 
-```
+Buka browser dan akses:
+
+```text
 http://localhost:8080
 ```
 
 ---
 
-## 🔑 Default Admin Account
+## 🔑 Akun Admin Default
 
-Use the following credentials to log in:
+Gunakan akun berikut untuk masuk ke halaman administrator:
 
 | Email                                     | Password |
 | ----------------------------------------- | -------- |
 | [admin@gmail.com](mailto:admin@gmail.com) | admin123 |
 
----
-
-## 📁 Project Structure
-
-```
-app/
-├── Config/
-├── Controllers/
-├── Models/
-└── Views/
-
-public/
-└── AdminLTE/
-
-writable/
-
-.env
-```
+> ⚠️ Untuk penggunaan di lingkungan produksi, segera ubah password default setelah login.
 
 ---
 
-## 📌 Requirements
+## 📌 Persyaratan
 
-* PHP 7.4 or higher
+Pastikan perangkat kamu sudah memiliki:
+
+* PHP 7.4 atau lebih tinggi
 * Composer
-* MySQL or MariaDB
-* Enable the following PHP extensions:
+* MySQL atau MariaDB
+* Ekstensi PHP berikut:
 
-```
+```text
 intl
 curl
 mbstring
@@ -170,48 +157,49 @@ openssl
 mysqli
 ```
 
-If you're using **Laragon** or **XAMPP**, place the project inside:
+Jika menggunakan **Laragon** atau **XAMPP**, letakkan project di dalam:
 
-```
+```text
 www/
 ```
 
-or
+atau:
 
-```
+```text
 htdocs/
 ```
 
 ---
 
-## 👀 Preview
+## 👀 Tampilan Aplikasi
 
-| Home | Login |
-|---|---|
+### Halaman Utama & Login
+
+| Halaman Utama                                   | Login                                            |
+| ----------------------------------------------- | ------------------------------------------------ |
 | <img src="public/preview/home.png" width="400"> | <img src="public/preview/login.png" width="400"> |
 
-| Register | Dashboard |
-|---|---|
+### Registrasi & Dashboard
+
+| Registrasi                                          | Dashboard                                            |
+| --------------------------------------------------- | ---------------------------------------------------- |
 | <img src="public/preview/register.png" width="400"> | <img src="public/preview/dashboard.png" width="400"> |
 
+---
+
+## 🤝 Kontribusi
+
+Kontribusi sangat terbuka untuk pengembangan project ini.
+
+Jika ingin membantu meningkatkan project, kamu dapat:
+
+* Melakukan **Fork** repository
+* Membuat branch baru
+* Melakukan perubahan dan commit
+* Mengirimkan **Pull Request**
 
 ---
 
-## 🤝 Contributing
+## 📄 Lisensi
 
-Contributions are welcome!
-
-If you'd like to improve this project, feel free to:
-
-* Fork this repository
-* Create a new branch
-* Commit your changes
-* Submit a Pull Request
-
----
-
-## 📄 License
-
-This project is intended for educational purposes and academic learning.
-
-You are free to use, modify, and distribute it in accordance with the project's license.
+Project ini dibuat untuk keperluan pembelajaran dan pendidikan.
